@@ -11,18 +11,19 @@ public class Main {
     };
 
     public static void main(String[] args) {
-        System.out.println(HashFunc("угу,ага,оно,сто,ост,сон,нос.Привет,что нового?"));
+        System.out.println(HashFunc("да,ад,ага,оно,сто,ост,сон,нос.Привет,что нового?Защита информации."));
     }
 
     public static int func(int first,int last,int sum){
         int dif = last - first;
         int res = (int) (Math.pow(3,first)+Math.pow(2,last)+Math.pow(2,dif))%sum;
+
         return res;
     }
     public static String HashFunc(String input){
         int sum = 0,first=0,last=0;
         input = input.toLowerCase();
-        String [] words = input.split("\\s|[.!,?\\-]");
+        String [] words = input.split("[.!,?\\-\\s]");
 
         for (int i = 0;i<words.length;i++){
             for(int j = 0;j<words[i].length();j++){

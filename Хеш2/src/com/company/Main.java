@@ -15,8 +15,8 @@ public class Main {
     }
 
     public static int func(int first,int last,int sum){
-
-        int res = (int) (Math.pow(first,3)+Math.pow(last,2)+last-first)%sum;
+        int dif = last - first;
+        int res = (int) (Math.pow(3,first)+Math.pow(2,last)+Math.pow(2,dif))%sum;
         return res;
     }
     public static String HashFunc(String input){
